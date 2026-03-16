@@ -3,665 +3,642 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>huduma · creative & official</title>
-    <!-- Font Awesome 6 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts: outfit + space grotesk -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Nexus Creative & Solutions | Digital Services</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    
     <style>
-        /* reset & base — no AI vibe, warm & grounded */
+        /* --- VARIABLES & RESET --- */
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --accent-primary: #38bdf8; /* Sky Blue */
+            --accent-secondary: #818cf8; /* Indigo */
+            --accent-glow: #22d3ee;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            --glass: rgba(30, 41, 59, 0.7);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        html {
             scroll-behavior: smooth;
         }
 
         body {
             font-family: 'Outfit', sans-serif;
-            background-color: #faf8f5;
-            color: #1f1a28;
-            line-height: 1.5;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
             overflow-x: hidden;
+            line-height: 1.6;
         }
 
-        /* natural color palette — earthy but fresh */
-        :root {
-            --clay: #c17f5b;        /* warm terracotta */
-            --sage: #7f9a7b;         /* muted green */
-            --ink: #2c2a33;          /* deep charcoal */
-            --paper: #fefcf7;        /* off-white */
-            --stone: #e8e2da;         /* warm gray */
-            --accent-light: #f4ebe3;
-            --shadow: 0 15px 35px -10px rgba(44, 42, 51, 0.12);
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
         }
 
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* --- UTILITIES --- */
         .container {
-            max-width: 1300px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 20px;
         }
 
-        /* ===== navbar (handcrafted feel) ===== */
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1.5rem 0;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            border-bottom: 2px solid var(--stone);
-        }
-
-        .logo-block {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .logo-img {
-            width: 52px;
-            height: 52px;
-            background: var(--stone);
-            border-radius: 14px 4px 14px 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            box-shadow: 0 6px 0 var(--clay);
-            transition: 0.2s;
-        }
-
-        .logo-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .logo-img-placeholder {
-            /* this is just in case image missing — but you'll use market.png */
-            font-size: 2rem;
-            opacity: 0.5;
-        }
-
-        .brand-name {
-            font-size: 2rem;
-            font-weight: 600;
-            letter-spacing: -0.03em;
-            background: linear-gradient(145deg, #3b363f, #725b4b);
+        .gradient-text {
+            background: var(--gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+            z-index: -1;
+            transition: opacity 0.3s;
+            opacity: 0;
+        }
+
+        .btn-primary:hover::before { opacity: 1; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(56, 189, 248, 0.6); }
+
+        /* --- NAVBAR --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* YOUR LOGO IMAGE STYLE */
+        .logo-img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.3));
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
         .nav-links {
             display: flex;
-            gap: 2.5rem;
-            font-weight: 500;
-            font-size: 1.1rem;
+            gap: 40px;
         }
 
         .nav-links a {
-            text-decoration: none;
-            color: var(--ink);
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
             position: relative;
-            padding-bottom: 4px;
         }
 
+        .nav-links a:hover { color: var(--accent-primary); }
+        
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -5px;
             left: 0;
             width: 0;
-            height: 2.5px;
-            background: var(--clay);
-            transition: width 0.25s ease;
+            height: 2px;
+            background: var(--accent-primary);
+            transition: 0.3s;
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
+        .nav-links a:hover::after { width: 100%; }
 
-        /* ===== dynamic hero ===== */
+        .mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+
+        /* --- HERO SECTION --- */
         .hero {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            padding: 4rem 0 3rem;
-            gap: 3rem;
+            padding: 180px 0 100px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .hero-text {
-            flex: 1 1 350px;
+        /* Background Glow Orb */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+            z-index: -1;
+            filter: blur(60px);
         }
 
-        .hero-text h1 {
-            font-size: 3.8rem;
-            font-weight: 700;
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
             line-height: 1.1;
-            font-family: 'Space Grotesk', sans-serif;
-            background: linear-gradient(160deg, #342e3c, #7a5e4b);
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--accent-primary);
+        }
+
+        /* --- SERVICES GRID (BENTO STYLE) --- */
+        .services {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 35px;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.06), transparent 40%);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .service-card:hover::after { opacity: 1; }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: rgba(56, 189, 248, 0.1);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--accent-primary);
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            z-index: 2;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            z-index: 2;
+        }
+
+        .service-list {
+            margin-top: auto;
+            z-index: 2;
+        }
+
+        .service-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .service-list li i {
+            color: var(--accent-secondary);
+            font-size: 0.8rem;
+        }
+
+        /* --- GOVERNMENT SERVICES SPECIAL SECTION --- */
+        .gov-services {
+            background: #162032;
+            padding: 80px 0;
+            margin: 50px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .gov-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .gov-item {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255,255,255,0.02);
+            border-radius: 16px;
+            transition: 0.3s;
+        }
+
+        .gov-item:hover {
+            background: rgba(255,255,255,0.05);
+        }
+
+        .gov-item i {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: var(--gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .hero-text p {
-            font-size: 1.3rem;
-            color: #4c4540;
-            margin: 1.5rem 0 2rem;
-            max-width: 550px;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 1.2rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2.4rem;
-            border-radius: 60px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.2s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            border: 2px solid transparent;
-        }
-
-        .btn-primary {
-            background: var(--clay);
-            color: #fefcf7;
-            box-shadow: 0 10px 20px -10px var(--clay);
-        }
-
-        .btn-primary:hover {
-            background: #a86948;
-            transform: translateY(-3px);
-            box-shadow: 0 20px 25px -12px #a86948;
-        }
-
-        .btn-outline {
-            border-color: var(--clay);
-            color: var(--clay);
-        }
-
-        .btn-outline:hover {
-            background: var(--clay);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        .hero-visual {
-            flex: 1 1 350px;
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-
-        .hero-visual img {
-            max-width: 100%;
-            width: 380px;
-            border-radius: 40px 12px 40px 12px;
-            box-shadow: var(--shadow);
-            transform: rotate(1deg);
-            transition: transform 0.3s ease;
-        }
-
-        .hero-visual img:hover {
-            transform: rotate(0deg) scale(1.02);
-        }
-
-        /* floating badge (dynamic detail) */
-        .floating-badge {
-            position: absolute;
-            bottom: -10px;
-            left: -20px;
-            background: white;
-            padding: 0.7rem 1.5rem;
-            border-radius: 80px;
-            font-weight: 600;
-            box-shadow: 0 10px 20px rgba(193, 127, 91, 0.25);
-            border-left: 5px solid var(--sage);
-            font-size: 1rem;
-            backdrop-filter: blur(4px);
-        }
-
-        /* section style */
-        .section-title {
-            font-size: 2.6rem;
-            font-weight: 600;
-            margin: 4rem 0 2rem;
-            position: relative;
-            display: inline-block;
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        .section-title::before {
-            content: '●';
-            color: var(--clay);
-            margin-right: 10px;
-            font-size: 2rem;
-            display: inline-block;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 0.5; transform: scale(0.9); }
-            50% { opacity: 1; transform: scale(1.1); }
-            100% { opacity: 0.5; transform: scale(0.9); }
-        }
-
-        /* service cards — organic grid */
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .service-item {
-            background: var(--paper);
-            padding: 2.2rem 1.5rem;
-            border-radius: 50px 18px 50px 18px;
-            transition: all 0.25s;
-            border: 1px solid var(--stone);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.02);
-            position: relative;
-            z-index: 2;
-        }
-
-        .service-item:hover {
-            transform: translateY(-10px) scale(1.01);
-            border-color: var(--clay);
-            box-shadow: 0 30px 35px -15px rgba(193, 127, 91, 0.25);
-        }
-
-        .service-icon {
-            width: 75px;
-            height: 75px;
-            background: #f4ede7;
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.2rem;
-            color: var(--clay);
-            margin-bottom: 1.8rem;
-            transition: 0.2s;
-        }
-
-        .service-item:hover .service-icon {
-            background: var(--clay);
-            color: white;
-            border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
-        }
-
-        .service-item h3 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .service-item p {
-            color: #5b534b;
-        }
-
-        /* wide panel — for kra, sha etc */
-        .feature-panel {
-            background: #f2ede8;
-            border-radius: 70px 20px 70px 20px;
-            padding: 3rem 3rem;
-            margin: 4rem 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            align-items: center;
-            box-shadow: inset 0 -3px 0 var(--stone), var(--shadow);
-        }
-
-        .panel-content {
-            flex: 2 1 300px;
-        }
-
-        .panel-content h2 {
-            font-size: 2.2rem;
-            font-weight: 600;
-            color: #3e3a44;
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        .tag-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin: 1.8rem 0;
-        }
-
-        .tag {
-            background: white;
-            padding: 0.6rem 1.6rem;
-            border-radius: 60px;
-            font-weight: 500;
-            border-left: 5px solid var(--sage);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
-            transition: 0.15s;
-        }
-
-        .tag i {
-            color: var(--clay);
-            margin-right: 8px;
-        }
-
-        .tag:hover {
-            background: var(--clay);
-            color: white;
-            border-left-color: white;
-        }
-
-        .tag:hover i {
-            color: white;
-        }
-
-        .panel-visual {
-            flex: 1 1 200px;
+        /* --- CONTACT & FOOTER --- */
+        .contact {
+            padding: 100px 0;
             text-align: center;
         }
 
-        .panel-visual img {
-            max-width: 100%;
-            width: 220px;
-            border-radius: 30px 8px 30px 8px;
-            box-shadow: 0 25px 30px -10px #977b66;
-            transform: scaleX(-1); /* subtle dynamic */
+        .contact-box {
+            background: linear-gradient(180deg, var(--bg-card), var(--bg-dark));
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        /* second panel variation */
-        .feature-panel.light {
-            background: #e5e7dd;
-        }
-
-        /* website design special card */
-        .website-card {
-            background: #cfd9d1;
-            border-radius: 40px;
-            padding: 2rem 2.5rem;
-            margin: 2.5rem 0;
+        .social-dock {
             display: flex;
-            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
             flex-wrap: wrap;
-            gap: 2rem;
-            box-shadow: 0 20px 30px -10px #7a8f7d;
         }
 
-        .website-card .text h3 {
-            font-size: 2.2rem;
-            font-weight: 600;
-        }
-
-        .website-card .text p {
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.2rem;
+            border: 1px solid var(--border);
         }
 
-        .website-card .icon-emblem {
-            background: var(--paper);
-            width: 85px;
-            height: 85px;
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--ink);
-        }
-
-        /* social & footer */
-        .social-wrap {
-            display: flex;
-            justify-content: center;
-            gap: 2.2rem;
-            margin: 4rem 0 2rem;
-        }
-
-        .social-link {
-            background: var(--paper);
-            width: 70px;
-            height: 70px;
-            border-radius: 40% 60% 60% 40% / 50% 40% 60% 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.2rem;
-            color: var(--ink);
-            box-shadow: 0 10px 18px #dad1c9;
-            transition: all 0.25s;
-            border: 1px solid var(--stone);
-            text-decoration: none;
-        }
-
-        .social-link:hover {
-            background: var(--clay);
-            color: white;
-            border-radius: 60% 40% 40% 60% / 40% 60% 40% 60%;
-            transform: translateY(-8px) rotate(3deg);
+        .social-btn:hover {
+            background: var(--accent-primary);
+            color: var(--bg-dark);
+            transform: scale(1.1);
         }
 
         footer {
-            background: #dfd9d1;
-            border-radius: 60px 60px 0 0;
-            padding: 3rem 2rem;
-            margin-top: 5rem;
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
             text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
-        .footer-name {
-            font-size: 2.8rem;
-            font-weight: 600;
-            font-family: 'Space Grotesk', sans-serif;
-            color: #2c2a33;
+        /* --- ANIMATIONS --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
         }
 
-        /* little moving dots (dynamics) */
-        .moving-dots {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 0.2;
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .dot {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            background: var(--clay);
-            border-radius: 50%;
-            animation: floatDot 18s infinite ease-in-out;
-        }
-
-        @keyframes floatDot {
-            0% { transform: translate(0,0) scale(1); }
-            33% { transform: translate(30px, -20px) scale(1.4); }
-            66% { transform: translate(-20px, 30px) scale(0.8); }
-            100% { transform: translate(0,0) scale(1); }
-        }
-
-        /* responsiveness */
-        @media (max-width: 700px) {
-            .hero-text h1 { font-size: 2.8rem; }
-            .section-title { font-size: 2rem; }
-            nav { flex-direction: column; align-items: start; }
-            .nav-links { gap: 1.5rem; }
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+            .nav-links { display: none; } /* Simplified for this demo */
+            .mobile-toggle { display: block; }
+            .gov-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <!-- background dots (dynamic vibe) -->
-    <div class="moving-dots">
-        <div class="dot" style="top:15%; left:8%;"></div>
-        <div class="dot" style="top:70%; left:85%; animation-delay:-3s;"></div>
-        <div class="dot" style="top:40%; left:20%; animation-delay:-7s;"></div>
-        <div class="dot" style="top:85%; left:30%; animation-delay:-2s;"></div>
-        <div class="dot" style="top:55%; left:70%;"></div>
-    </div>
 
-    <div class="container">
-        <!-- navbar with logo image (market.png) -->
-        <nav>
-            <div class="logo-block">
-                <div class="logo-img">
-                    <!-- your logo: images/market.png -->
-                    <img src="images/market.png" alt="Huduma logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'logo-img-placeholder\'><i class=\'fas fa-store\'></i></span>';">
+    <!-- NAVBAR -->
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo-container">
+                <!-- YOUR LOGO IMAGE HERE -->
+                <img src="images/market.png" alt="Nexus Logo" class="logo-img">
+                <span class="brand-name">Nexus<span class="gradient-text">Creative</span></span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Design Services</a></li>
+                <li><a href="#gov-services">Gov. Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content reveal">
+                <div class="hero-tags">
+                    <span class="tag">Graphic Design</span>
+                    <span class="tag">Web Development</span>
+                    <span class="tag">Document Editing</span>
                 </div>
-                <span class="brand-name">huduma forge</span>
+                <h1>We Design Your <br><span class="gradient-text">Digital Future</span></h1>
+                <p>From stunning logos and websites to seamless government applications (KRA, HELB, KUCCPS). We handle the details so you can focus on growth.</p>
+                <a href="#contact" class="btn btn-primary">Start a Project</a>
             </div>
-            <div class="nav-links">
-                <a href="#">home</a>
-                <a href="#graphics">graphics</a>
-                <a href="#digital">web+edit</a>
-                <a href="#kra">kra & helb</a>
-                <a href="#connect">social</a>
-            </div>
-        </nav>
+        </div>
+    </section>
 
-        <!-- hero (no AI, handcrafted) -->
-        <div class="hero">
-            <div class="hero-text">
-                <h1>design, paper, official & beyond</h1>
-                <p>From a sharp logo to KRA, SHA, HELB, KUCCPS — we handle it like pros. No robot talk, just real help.</p>
-                <div class="btn-group">
-                    <a href="#" class="btn btn-primary"><i class="fas fa-pen-fancy"></i> start a project</a>
-                    <a href="#graphics" class="btn btn-outline"><i class="fas fa-arrow-down"></i> peek services</a>
+    <!-- CORE SERVICES (Design & Tech) -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Creative & <span class="gradient-text">Technical</span></h2>
+                <p>Professional solutions for your brand and documentation needs.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Card 1: Graphic Design -->
+                <div class="service-card reveal">
+                    <div class="icon-box"><i class="fas fa-pen-nib"></i></div>
+                    <h3>Graphic Design</h3>
+                    <p>Visual identity that speaks louder than words. We create assets that define your brand.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Logo & Brand Identity</li>
+                        <li><i class="fas fa-check"></i> Brochures & Flyers</li>
+                        <li><i class="fas fa-check"></i> Business Cards</li>
+                        <li><i class="fas fa-check"></i> Posters & Banners</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Web Design -->
+                <div class="service-card reveal">
+                    <div class="icon-box"><i class="fas fa-code"></i></div>
+                    <h3>Web Design & Edit</h3>
+                    <p>Modern, responsive websites tailored to your needs. Updates and edits handled swiftly.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Custom Website Design</li>
+                        <li><i class="fas fa-check"></i> Content Editing</li>
+                        <li><i class="fas fa-check"></i> Landing Pages</li>
+                        <li><i class="fas fa-check"></i> Bug Fixes & Updates</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Document Editing -->
+                <div class="service-card reveal">
+                    <div class="icon-box"><i class="fas fa-file-signature"></i></div>
+                    <h3>Doc & Image Edit</h3>
+                    <p>Professional formatting and editing for certificates, CVs, and official documents.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> CV/Resume Design</li>
+                        <li><i class="fas fa-check"></i> Certificate Editing</li>
+                        <li><i class="fas fa-check"></i> Receipt Creation</li>
+                        <li><i class="fas fa-check"></i> Screenshot & PDF Edit</li>
+                    </ul>
                 </div>
             </div>
-            <div class="hero-visual">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&auto=format&fit=crop" alt="workspace">
-                <span class="floating-badge"><i class="fas fa-check-circle" style="color: #7f9a7b;"></i> 200+ jobs done</span>
-            </div>
         </div>
+    </section>
 
-        <!-- graphic designs (logos, brochures, business cards, posters) -->
-        <div id="graphics">
-            <h2 class="section-title">graphic identity</h2>
-        </div>
-        <div class="service-grid">
-            <div class="service-item">
-                <div class="service-icon"><i class="fas fa-star"></i></div>
-                <h3>logos</h3>
-                <p>symbols that stick — wordmarks, emblems, mascots</p>
+    <!-- GOVERNMENT SERVICES (Special Section) -->
+    <section class="gov-services" id="gov-services">
+        <div class="container">
+            <div class="section-header reveal" style="text-align: center;">
+                <h2>Government & <span class="gradient-text">Applications</span></h2>
+                <p>Hassle-free assistance with official Kenyan portals.</p>
             </div>
-            <div class="service-item">
-                <div class="service-icon"><i class="fas fa-book"></i></div>
-                <h3>brochures</h3>
-                <p>tri-fold, catalog, lookbook — print/digital ready</p>
-            </div>
-            <div class="service-item">
-                <div class="service-icon"><i class="fas fa-id-card"></i></div>
-                <h3>business cards</h3>
-                <p>premium stock, foil, minimal or bold</p>
-            </div>
-            <div class="service-item">
-                <div class="service-icon"><i class="fas fa-scroll"></i></div>
-                <h3>posters</h3>
-                <p>events, promos, gigs — from A5 to billboard</p>
-            </div>
-        </div>
 
-        <!-- website design and editing (prominent) -->
-        <div id="digital" class="website-card">
-            <div class="icon-emblem"><i class="fas fa-code"></i></div>
-            <div class="text">
-                <h3>website design & editing</h3>
-                <p>Custom sites, revamps, bug fixes, speed tweaks — we don't just "edit", we craft.</p>
-            </div>
-            <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=120&auto=format&fit=crop" style="border-radius: 30px; width: 100px; height: 100px; object-fit: cover;" alt="web">
-        </div>
-
-        <!-- certificate, receipt, cv, screenshot, document editing (cluster) -->
-        <h2 class="section-title">editing & touch-ups</h2>
-        <div class="feature-panel light" style="background: #f1ebe4;">
-            <div class="panel-content">
-                <h2>certificates · receipts · CV · screenshots · documents</h2>
-                <div class="tag-list">
-                    <span class="tag"><i class="fas fa-certificate"></i> certificate</span>
-                    <span class="tag"><i class="fas fa-receipt"></i> receipt</span>
-                    <span class="tag"><i class="fas fa-file-alt"></i> CV</span>
-                    <span class="tag"><i class="fas fa-camera"></i> screenshot</span>
-                    <span class="tag"><i class="fas fa-passport"></i> document edit</span>
-                    <span class="tag"><i class="fas fa-image"></i> image retouch</span>
+            <div class="gov-grid">
+                <div class="gov-item reveal">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <h3>KRA Services</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 10px;">PIN Registration, Returns Filing, eTIMS, Compliance Certificates & More.</p>
                 </div>
-                <p>dates, names, signatures, background removal — anything printed or digital.</p>
-            </div>
-            <div class="panel-visual">
-                <img src="https://images.unsplash.com/photo-1560264357-8bbd8f46cdf2?w=200&auto=format&fit=crop" alt="editing">
-            </div>
-        </div>
 
-        <!-- KRA(all) + SHA + KUCCPS + HELB 1st time -->
-        <div id="kra">
-            <h2 class="section-title">official & student services</h2>
-        </div>
-        <div class="feature-panel">
-            <div class="panel-content">
-                <h2>KRA services (all) · SHA · KUCCPS · HELB (1st time)</h2>
-                <div class="tag-list">
-                    <span class="tag"><i class="fas fa-file-invoice"></i> KRA PIN</span>
-                    <span class="tag"><i class="fas fa-chart-line"></i> returns filing</span>
-                    <span class="tag"><i class="fas fa-shield"></i> SHA reg</span>
-                    <span class="tag"><i class="fas fa-graduation-cap"></i> KUCCPS</span>
-                    <span class="tag"><i class="fas fa-hand-holding-heart"></i> HELB (first time)</span>
-                    <span class="tag"><i class="fas fa-check-double"></i> iTax support</span>
+                <div class="gov-item reveal">
+                    <i class="fas fa-heart-pulse"></i>
+                    <h3>SHA Registration</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 10px;">Social Health Authority registration for individuals and families.</p>
                 </div>
-                <p>We walk you through every step — applications, documents, follow ups. human, not AI.</p>
+
+                <div class="gov-item reveal">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>KUCCPS</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 10px;">University placement applications, course selection, and revisions.</p>
+                </div>
+
+                <div class="gov-item reveal">
+                    <i class="fas fa-university"></i>
+                    <h3>HELB (1st Time)</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 10px;">Complete guidance on first-time loan applications and document upload.</p>
+                </div>
+                
+                <!-- Filler items for grid balance if needed, or merge above -->
+                <div class="gov-item reveal" style="grid-column: span 3; background: rgba(56, 189, 248, 0.05); border: 1px solid var(--accent-primary);">
+                    <h3 style="color: var(--accent-primary);">Need Help With Something Else?</h3>
+                    <p style="color: var(--text-muted);">We offer general computer literacy and miscellaneous digital assistance.</p>
+                </div>
             </div>
-            <div class="panel-visual">
-                <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=200&auto=format&fit=crop" alt="KRA files">
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-box reveal">
+                <h2>Ready to <span class="gradient-text">Collaborate?</span></h2>
+                <p style="color: var(--text-muted); margin: 20px 0;">Reach out today for a quote or assistance.</p>
+                
+                <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; flex-wrap: wrap;">
+                    <div style="text-align: left;">
+                        <i class="fas fa-envelope" style="color: var(--accent-primary); margin-bottom: 10px;"></i>
+                        <p>your.email@example.com</p>
+                    </div>
+                    <div style="text-align: left;">
+                        <i class="fas fa-phone" style="color: var(--accent-primary); margin-bottom: 10px;"></i>
+                        <p>+254 700 000 000</p>
+                    </div>
+                </div>
+
+                <div class="social-dock">
+                    <!-- Add your links here later -->
+                    <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- social links (later add) -->
-        <div id="connect">
-            <h2 class="section-title">pull up</h2>
-        </div>
-        <div class="social-wrap">
-            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="social-link"><i class="far fa-envelope"></i></a>
-        </div>
-        <p style="text-align: center; margin-bottom: 2rem; color:#5f574f;">— drop your links here later, they're live —</p>
-
-    </div> <!-- container end -->
-
+    <!-- FOOTER -->
     <footer>
-        <div class="footer-name">huduma forge</div>
-        <p style="max-width: 500px; margin: 1.2rem auto;">graphics · website · document editing · kra · sha · kuccps · helb</p>
-        <div style="width: 60px; height: 4px; background: var(--clay); margin: 1.5rem auto;"></div>
-        <p style="color: #3b3530;">© 2025 — built with real intention</p>
-        <!-- tiny logo revisit -->
-        <div style="display: flex; justify-content: center; margin-top: 2rem;">
-            <div style="background:var(--clay); width:45px; height:45px; border-radius:12px 2px 12px 2px; display:flex; align-items:center; justify-content:center; color:white; font-size:1.5rem;">⚒️</div>
+        <div class="container">
+            <p>&copy; 2024 Nexus Creative & Solutions. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- small script for nothing fancy — just to prove it's not ai-generic (but dynamic hover etc already there) -->
+    <!-- JAVASCRIPT FOR DYNAMICS -->
     <script>
-        // tiny human touch: console.log that makes you smile
-        (function() {
-            console.log("👋 site crafted manually — no AI templates harmed.");
-        })();
+        // 1. Scroll Reveal Animation
+        window.addEventListener('scroll', reveal);
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 150;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        
+        // Trigger once on load
+        reveal();
+
+        // 2. Mouse Move Gradient Effect on Cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.onmousemove = e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            }
+        });
+
+        // 3. Mobile Menu Toggle (Simple)
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileToggle.addEventListener('click', () => {
+            if(navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '70px';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.background = '#0f172a';
+                navLinks.style.padding = '20px';
+                navLinks.style.borderBottom = '1px solid var(--border)';
+            }
+        });
     </script>
 </body>
 </html>
