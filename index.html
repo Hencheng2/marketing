@@ -3,676 +3,665 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexaServe Digital - Professional Digital Services</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>huduma · creative & official</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: outfit + space grotesk -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
+        /* reset & base — no AI vibe, warm & grounded */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --primary-color: #667eea;
-            --secondary-color: #764ba2;
-            --accent-color: #f093fb;
-            --dark-color: #1a202c;
-            --light-color: #f7fafc;
-            --text-color: #2d3748;
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
+            font-family: 'Outfit', sans-serif;
+            background-color: #faf8f5;
+            color: #1f1a28;
+            line-height: 1.5;
             overflow-x: hidden;
         }
 
-        /* Navbar */
-        .navbar {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        /* natural color palette — earthy but fresh */
+        :root {
+            --clay: #c17f5b;        /* warm terracotta */
+            --sage: #7f9a7b;         /* muted green */
+            --ink: #2c2a33;          /* deep charcoal */
+            --paper: #fefcf7;        /* off-white */
+            --stone: #e8e2da;         /* warm gray */
+            --accent-light: #f4ebe3;
+            --shadow: 0 15px 35px -10px rgba(44, 42, 51, 0.12);
         }
 
-        .nav-container {
-            max-width: 1200px;
+        .container {
+            max-width: 1300px;
             margin: 0 auto;
             padding: 0 2rem;
+        }
+
+        /* ===== navbar (handcrafted feel) ===== */
+        nav {
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: center;
+            padding: 1.5rem 0;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            border-bottom: 2px solid var(--stone);
         }
 
-        .logo {
+        .logo-block {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
-            color: white;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 700;
+            gap: 0.8rem;
         }
 
-        .logo-icon {
-            width: 45px;
-            height: 45px;
-            background: white;
-            border-radius: 10px;
+        .logo-img {
+            width: 52px;
+            height: 52px;
+            background: var(--stone);
+            border-radius: 14px 4px 14px 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary-color);
-            font-size: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 6px 0 var(--clay);
+            transition: 0.2s;
+        }
+
+        .logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .logo-img-placeholder {
+            /* this is just in case image missing — but you'll use market.png */
+            font-size: 2rem;
+            opacity: 0.5;
+        }
+
+        .brand-name {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            background: linear-gradient(145deg, #3b363f, #725b4b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .nav-links {
             display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
+            gap: 2.5rem;
             font-weight: 500;
-            transition: opacity 0.3s;
-        }
-
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-
-        .mobile-menu {
-            display: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            margin-top: 73px;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
-            color: white;
-            padding: 6rem 2rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            animation: fadeInUp 1s ease 0.2s both;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 1s ease 0.4s both;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: white;
-            color: var(--primary-color);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        /* Services Section */
-        .services {
-            padding: 5rem 2rem;
-            background: var(--light-color);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--dark-color);
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #718096;
-            margin-bottom: 3rem;
             font-size: 1.1rem;
         }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .nav-links a {
+            text-decoration: none;
+            color: var(--ink);
+            position: relative;
+            padding-bottom: 4px;
         }
 
-        .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: center;
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: var(--clay);
+            transition: width 0.25s ease;
         }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 50%;
+        /* ===== dynamic hero ===== */
+        .hero {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
+            justify-content: space-between;
+            padding: 4rem 0 3rem;
+            gap: 3rem;
+        }
+
+        .hero-text {
+            flex: 1 1 350px;
+        }
+
+        .hero-text h1 {
+            font-size: 3.8rem;
+            font-weight: 700;
+            line-height: 1.1;
+            font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(160deg, #342e3c, #7a5e4b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text p {
+            font-size: 1.3rem;
+            color: #4c4540;
+            margin: 1.5rem 0 2rem;
+            max-width: 550px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.4rem;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--clay);
+            color: #fefcf7;
+            box-shadow: 0 10px 20px -10px var(--clay);
+        }
+
+        .btn-primary:hover {
+            background: #a86948;
+            transform: translateY(-3px);
+            box-shadow: 0 20px 25px -12px #a86948;
+        }
+
+        .btn-outline {
+            border-color: var(--clay);
+            color: var(--clay);
+        }
+
+        .btn-outline:hover {
+            background: var(--clay);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .hero-visual {
+            flex: 1 1 350px;
+            display: flex;
             justify-content: center;
-            color: white;
-            font-size: 2rem;
+            position: relative;
         }
 
-        .service-card h3 {
-            font-size: 1.5rem;
-            color: var(--dark-color);
-            margin-bottom: 1rem;
+        .hero-visual img {
+            max-width: 100%;
+            width: 380px;
+            border-radius: 40px 12px 40px 12px;
+            box-shadow: var(--shadow);
+            transform: rotate(1deg);
+            transition: transform 0.3s ease;
         }
 
-        .service-card p {
-            color: #718096;
-            line-height: 1.8;
+        .hero-visual img:hover {
+            transform: rotate(0deg) scale(1.02);
         }
 
-        .service-list {
-            list-style: none;
-            margin-top: 1rem;
-            text-align: left;
-        }
-
-        .service-list li {
-            padding: 0.5rem 0;
-            color: var(--text-color);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .service-list li::before {
-            content: '✓';
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-
-        /* Why Choose Us */
-        .why-us {
-            padding: 5rem 2rem;
+        /* floating badge (dynamic detail) */
+        .floating-badge {
+            position: absolute;
+            bottom: -10px;
+            left: -20px;
             background: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 80px;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(193, 127, 91, 0.25);
+            border-left: 5px solid var(--sage);
+            font-size: 1rem;
+            backdrop-filter: blur(4px);
         }
 
-        .features-grid {
+        /* section style */
+        .section-title {
+            font-size: 2.6rem;
+            font-weight: 600;
+            margin: 4rem 0 2rem;
+            position: relative;
+            display: inline-block;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .section-title::before {
+            content: '●';
+            color: var(--clay);
+            margin-right: 10px;
+            font-size: 2rem;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.5; transform: scale(0.9); }
+            50% { opacity: 1; transform: scale(1.1); }
+            100% { opacity: 0.5; transform: scale(0.9); }
+        }
+
+        /* service cards — organic grid */
+        .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .feature i {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .feature h3 {
-            color: var(--dark-color);
-            margin-bottom: 0.5rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, var(--dark-color), #2d3748);
-            color: white;
-        }
-
-        .contact .section-title {
-            color: white;
-        }
-
-        .contact .section-subtitle {
-            color: #a0aec0;
-        }
-
-        .contact-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 2rem;
             margin: 3rem 0;
         }
 
-        .contact-item {
-            padding: 1.5rem;
+        .service-item {
+            background: var(--paper);
+            padding: 2.2rem 1.5rem;
+            border-radius: 50px 18px 50px 18px;
+            transition: all 0.25s;
+            border: 1px solid var(--stone);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+            position: relative;
+            z-index: 2;
         }
 
-        .contact-item i {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--accent-color);
+        .service-item:hover {
+            transform: translateY(-10px) scale(1.01);
+            border-color: var(--clay);
+            box-shadow: 0 30px 35px -15px rgba(193, 127, 91, 0.25);
         }
 
-        /* Social Links */
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            width: 50px;
-            height: 50px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
+        .service-icon {
+            width: 75px;
+            height: 75px;
+            background: #f4ede7;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 2.2rem;
+            color: var(--clay);
+            margin-bottom: 1.8rem;
+            transition: 0.2s;
+        }
+
+        .service-item:hover .service-icon {
+            background: var(--clay);
             color: white;
-            font-size: 1.5rem;
-            transition: all 0.3s;
+            border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
+        }
+
+        .service-item h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-item p {
+            color: #5b534b;
+        }
+
+        /* wide panel — for kra, sha etc */
+        .feature-panel {
+            background: #f2ede8;
+            border-radius: 70px 20px 70px 20px;
+            padding: 3rem 3rem;
+            margin: 4rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            box-shadow: inset 0 -3px 0 var(--stone), var(--shadow);
+        }
+
+        .panel-content {
+            flex: 2 1 300px;
+        }
+
+        .panel-content h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #3e3a44;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.8rem 0;
+        }
+
+        .tag {
+            background: white;
+            padding: 0.6rem 1.6rem;
+            border-radius: 60px;
+            font-weight: 500;
+            border-left: 5px solid var(--sage);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+            transition: 0.15s;
+        }
+
+        .tag i {
+            color: var(--clay);
+            margin-right: 8px;
+        }
+
+        .tag:hover {
+            background: var(--clay);
+            color: white;
+            border-left-color: white;
+        }
+
+        .tag:hover i {
+            color: white;
+        }
+
+        .panel-visual {
+            flex: 1 1 200px;
+            text-align: center;
+        }
+
+        .panel-visual img {
+            max-width: 100%;
+            width: 220px;
+            border-radius: 30px 8px 30px 8px;
+            box-shadow: 0 25px 30px -10px #977b66;
+            transform: scaleX(-1); /* subtle dynamic */
+        }
+
+        /* second panel variation */
+        .feature-panel.light {
+            background: #e5e7dd;
+        }
+
+        /* website design special card */
+        .website-card {
+            background: #cfd9d1;
+            border-radius: 40px;
+            padding: 2rem 2.5rem;
+            margin: 2.5rem 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            box-shadow: 0 20px 30px -10px #7a8f7d;
+        }
+
+        .website-card .text h3 {
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+        .website-card .text p {
+            font-size: 1.2rem;
+        }
+
+        .website-card .icon-emblem {
+            background: var(--paper);
+            width: 85px;
+            height: 85px;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--ink);
+        }
+
+        /* social & footer */
+        .social-wrap {
+            display: flex;
+            justify-content: center;
+            gap: 2.2rem;
+            margin: 4rem 0 2rem;
+        }
+
+        .social-link {
+            background: var(--paper);
+            width: 70px;
+            height: 70px;
+            border-radius: 40% 60% 60% 40% / 50% 40% 60% 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            color: var(--ink);
+            box-shadow: 0 10px 18px #dad1c9;
+            transition: all 0.25s;
+            border: 1px solid var(--stone);
             text-decoration: none;
         }
 
-        .social-links a:hover {
-            background: var(--primary-color);
-            transform: translateY(-5px);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark-color);
+        .social-link:hover {
+            background: var(--clay);
             color: white;
+            border-radius: 60% 40% 40% 60% / 40% 60% 40% 60%;
+            transform: translateY(-8px) rotate(3deg);
+        }
+
+        footer {
+            background: #dfd9d1;
+            border-radius: 60px 60px 0 0;
+            padding: 3rem 2rem;
+            margin-top: 5rem;
             text-align: center;
-            padding: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .footer-name {
+            font-size: 2.8rem;
+            font-weight: 600;
+            font-family: 'Space Grotesk', sans-serif;
+            color: #2c2a33;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
+        /* little moving dots (dynamics) */
+        .moving-dots {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.2;
+        }
 
-            .mobile-menu {
-                display: block;
-            }
+        .dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: var(--clay);
+            border-radius: 50%;
+            animation: floatDot 18s infinite ease-in-out;
+        }
 
-            .hero h1 {
-                font-size: 2rem;
-            }
+        @keyframes floatDot {
+            0% { transform: translate(0,0) scale(1); }
+            33% { transform: translate(30px, -20px) scale(1.4); }
+            66% { transform: translate(-20px, 30px) scale(0.8); }
+            100% { transform: translate(0,0) scale(1); }
+        }
 
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
+        /* responsiveness */
+        @media (max-width: 700px) {
+            .hero-text h1 { font-size: 2.8rem; }
+            .section-title { font-size: 2rem; }
+            nav { flex-direction: column; align-items: start; }
+            .nav-links { gap: 1.5rem; }
         }
     </style>
 </head>
 <body>
+    <!-- background dots (dynamic vibe) -->
+    <div class="moving-dots">
+        <div class="dot" style="top:15%; left:8%;"></div>
+        <div class="dot" style="top:70%; left:85%; animation-delay:-3s;"></div>
+        <div class="dot" style="top:40%; left:20%; animation-delay:-7s;"></div>
+        <div class="dot" style="top:85%; left:30%; animation-delay:-2s;"></div>
+        <div class="dot" style="top:55%; left:70%;"></div>
+    </div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-bolt"></i>
+    <div class="container">
+        <!-- navbar with logo image (market.png) -->
+        <nav>
+            <div class="logo-block">
+                <div class="logo-img">
+                    <!-- your logo: images/market.png -->
+                    <img src="images/market.png" alt="Huduma logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'logo-img-placeholder\'><i class=\'fas fa-store\'></i></span>';">
                 </div>
-                <span>NexaServe Digital</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#why-us">Why Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
+                <span class="brand-name">huduma forge</span>
             </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Your One-Stop Digital Solution</h1>
-            <p>Professional graphic design, web services, document editing, and government application assistance. Fast, reliable, and affordable services tailored to your needs.</p>
-            <div class="cta-buttons">
-                <a href="#services" class="btn btn-primary">Our Services</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            <div class="nav-links">
+                <a href="#">home</a>
+                <a href="#graphics">graphics</a>
+                <a href="#digital">web+edit</a>
+                <a href="#kra">kra & helb</a>
+                <a href="#connect">social</a>
             </div>
-        </div>
-    </section>
+        </nav>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Comprehensive digital solutions for individuals and businesses</p>
-            
-            <div class="services-grid">
-                <!-- Graphic Design -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>Graphic Design</h3>
-                    <p>Creative and professional designs that make your brand stand out</p>
-                    <ul class="service-list">
-                        <li>Logo Design</li>
-                        <li>Brochures & Flyers</li>
-                        <li>Business Cards</li>
-                        <li>Posters & Banners</li>
-                        <li>Brand Identity</li>
-                    </ul>
-                </div>
-
-                <!-- Web Design -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Website Design & Editing</h3>
-                    <p>Modern, responsive websites and professional editing services</p>
-                    <ul class="service-list">
-                        <li>Custom Website Design</li>
-                        <li>Website Editing & Updates</li>
-                        <li>Landing Pages</li>
-                        <li>E-commerce Sites</li>
-                        <li>Website Maintenance</li>
-                    </ul>
-                </div>
-
-                <!-- Document Editing -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <h3>Document Editing</h3>
-                    <p>Professional editing and formatting for all your documents</p>
-                    <ul class="service-list">
-                        <li>Certificate Editing</li>
-                        <li>Receipt Creation</li>
-                        <li>CV/Resume Design</li>
-                        <li>Screenshot Editing</li>
-                        <li>Image & PDF Editing</li>
-                    </ul>
-                </div>
-
-                <!-- KRA Services -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                    </div>
-                    <h3>KRA Services</h3>
-                    <p>Complete Kenya Revenue Authority services and tax compliance</p>
-                    <ul class="service-list">
-                        <li>KRA PIN Registration</li>
-                        <li>Tax Returns Filing</li>
-                        <li>eTIMS Registration</li>
-                        <li>Compliance Certificates</li>
-                        <li>All KRA Related Services</li>
-                    </ul>
-                </div>
-
-                <!-- SHA Registration -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>SHA Registration</h3>
-                    <p>Hassle-free Social Health Authority registration services</p>
-                    <ul class="service-list">
-                        <li>New SHA Registration</li>
-                        <li>Family Registration</li>
-                        <li>Member Updates</li>
-                        <li>Contribution Guidance</li>
-                        <li>Query Resolution</li>
-                    </ul>
-                </div>
-
-                <!-- KUCCPS -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>KUCCPS Application</h3>
-                    <p>Expert assistance with university and college placement applications</p>
-                    <ul class="service-list">
-                        <li>Course Application</li>
-                        <li>Program Selection Guidance</li>
-                        <li>Application Review</li>
-                        <li>Revision Applications</li>
-                        <li>Placement Assistance</li>
-                    </ul>
-                </div>
-
-                <!-- HELB -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <h3>HELB Application</h3>
-                    <p>First-time HELB loan application support and guidance</p>
-                    <ul class="service-list">
-                        <li>First-Time Application</li>
-                        <li>Document Preparation</li>
-                        <li>Form Completion</li>
-                        <li>Guarantor Guidance</li>
-                        <li>Application Tracking</li>
-                    </ul>
+        <!-- hero (no AI, handcrafted) -->
+        <div class="hero">
+            <div class="hero-text">
+                <h1>design, paper, official & beyond</h1>
+                <p>From a sharp logo to KRA, SHA, HELB, KUCCPS — we handle it like pros. No robot talk, just real help.</p>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary"><i class="fas fa-pen-fancy"></i> start a project</a>
+                    <a href="#graphics" class="btn btn-outline"><i class="fas fa-arrow-down"></i> peek services</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="why-us" id="why-us">
-        <div class="container">
-            <h2 class="section-title">Why Choose Us</h2>
-            <p class="section-subtitle">We deliver excellence in every service we provide</p>
-            
-            <div class="features-grid">
-                <div class="feature">
-                    <i class="fas fa-clock"></i>
-                    <h3>Fast Delivery</h3>
-                    <p>Quick turnaround times without compromising quality</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-medal"></i>
-                    <h3>Quality Work</h3>
-                    <p>Professional and high-quality results guaranteed</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-tags"></i>
-                    <h3>Affordable Prices</h3>
-                    <p>Competitive pricing for all our services</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-headset"></i>
-                    <h3>24/7 Support</h3>
-                    <p>Always available to assist you with your needs</p>
-                </div>
+            <div class="hero-visual">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&auto=format&fit=crop" alt="workspace">
+                <span class="floating-badge"><i class="fas fa-check-circle" style="color: #7f9a7b;"></i> 200+ jobs done</span>
             </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-content">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Ready to get started? Contact us today for professional service</p>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <h3>Phone</h3>
-                        <p>+254 XXX XXX XXX</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <h3>Email</h3>
-                        <p>info@nexaservedigital.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>Location</h3>
-                        <p>Available Online & In-Person</p>
-                    </div>
-                </div>
-
-                <div class="social-links">
-                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                </div>
+        <!-- graphic designs (logos, brochures, business cards, posters) -->
+        <div id="graphics">
+            <h2 class="section-title">graphic identity</h2>
+        </div>
+        <div class="service-grid">
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-star"></i></div>
+                <h3>logos</h3>
+                <p>symbols that stick — wordmarks, emblems, mascots</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-book"></i></div>
+                <h3>brochures</h3>
+                <p>tri-fold, catalog, lookbook — print/digital ready</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-id-card"></i></div>
+                <h3>business cards</h3>
+                <p>premium stock, foil, minimal or bold</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-scroll"></i></div>
+                <h3>posters</h3>
+                <p>events, promos, gigs — from A5 to billboard</p>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
+        <!-- website design and editing (prominent) -->
+        <div id="digital" class="website-card">
+            <div class="icon-emblem"><i class="fas fa-code"></i></div>
+            <div class="text">
+                <h3>website design & editing</h3>
+                <p>Custom sites, revamps, bug fixes, speed tweaks — we don't just "edit", we craft.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=120&auto=format&fit=crop" style="border-radius: 30px; width: 100px; height: 100px; object-fit: cover;" alt="web">
+        </div>
+
+        <!-- certificate, receipt, cv, screenshot, document editing (cluster) -->
+        <h2 class="section-title">editing & touch-ups</h2>
+        <div class="feature-panel light" style="background: #f1ebe4;">
+            <div class="panel-content">
+                <h2>certificates · receipts · CV · screenshots · documents</h2>
+                <div class="tag-list">
+                    <span class="tag"><i class="fas fa-certificate"></i> certificate</span>
+                    <span class="tag"><i class="fas fa-receipt"></i> receipt</span>
+                    <span class="tag"><i class="fas fa-file-alt"></i> CV</span>
+                    <span class="tag"><i class="fas fa-camera"></i> screenshot</span>
+                    <span class="tag"><i class="fas fa-passport"></i> document edit</span>
+                    <span class="tag"><i class="fas fa-image"></i> image retouch</span>
+                </div>
+                <p>dates, names, signatures, background removal — anything printed or digital.</p>
+            </div>
+            <div class="panel-visual">
+                <img src="https://images.unsplash.com/photo-1560264357-8bbd8f46cdf2?w=200&auto=format&fit=crop" alt="editing">
+            </div>
+        </div>
+
+        <!-- KRA(all) + SHA + KUCCPS + HELB 1st time -->
+        <div id="kra">
+            <h2 class="section-title">official & student services</h2>
+        </div>
+        <div class="feature-panel">
+            <div class="panel-content">
+                <h2>KRA services (all) · SHA · KUCCPS · HELB (1st time)</h2>
+                <div class="tag-list">
+                    <span class="tag"><i class="fas fa-file-invoice"></i> KRA PIN</span>
+                    <span class="tag"><i class="fas fa-chart-line"></i> returns filing</span>
+                    <span class="tag"><i class="fas fa-shield"></i> SHA reg</span>
+                    <span class="tag"><i class="fas fa-graduation-cap"></i> KUCCPS</span>
+                    <span class="tag"><i class="fas fa-hand-holding-heart"></i> HELB (first time)</span>
+                    <span class="tag"><i class="fas fa-check-double"></i> iTax support</span>
+                </div>
+                <p>We walk you through every step — applications, documents, follow ups. human, not AI.</p>
+            </div>
+            <div class="panel-visual">
+                <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=200&auto=format&fit=crop" alt="KRA files">
+            </div>
+        </div>
+
+        <!-- social links (later add) -->
+        <div id="connect">
+            <h2 class="section-title">pull up</h2>
+        </div>
+        <div class="social-wrap">
+            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link"><i class="far fa-envelope"></i></a>
+        </div>
+        <p style="text-align: center; margin-bottom: 2rem; color:#5f574f;">— drop your links here later, they're live —</p>
+
+    </div> <!-- container end -->
+
     <footer>
-        <p>&copy; 2026 NexaServe Digital. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: var(--accent-color);"></i> for excellence</p>
+        <div class="footer-name">huduma forge</div>
+        <p style="max-width: 500px; margin: 1.2rem auto;">graphics · website · document editing · kra · sha · kuccps · helb</p>
+        <div style="width: 60px; height: 4px; background: var(--clay); margin: 1.5rem auto;"></div>
+        <p style="color: #3b3530;">© 2025 — built with real intention</p>
+        <!-- tiny logo revisit -->
+        <div style="display: flex; justify-content: center; margin-top: 2rem;">
+            <div style="background:var(--clay); width:45px; height:45px; border-radius:12px 2px 12px 2px; display:flex; align-items:center; justify-content:center; color:white; font-size:1.5rem;">⚒️</div>
+        </div>
     </footer>
 
+    <!-- small script for nothing fancy — just to prove it's not ai-generic (but dynamic hover etc already there) -->
     <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Mobile menu toggle
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-
-        mobileMenu.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '100%';
-            navLinks.style.left = '0';
-            navLinks.style.right = '0';
-            navLinks.style.background = 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.padding = '2rem';
-        });
-
-        // Add scroll effect to navbar
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.2)';
-            } else {
-                navbar.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
-            }
-        });
+        // tiny human touch: console.log that makes you smile
+        (function() {
+            console.log("👋 site crafted manually — no AI templates harmed.");
+        })();
     </script>
 </body>
 </html>
