@@ -102,7 +102,6 @@
         <div class="absolute inset-0 bg-navy-900/80 backdrop-blur-md border-b border-white/5"></div>
         <div class="container mx-auto px-6 py-4 relative z-10">
             <div class="flex justify-between items-center">
-                <!-- Logo Placeholder -->
                 <div class="flex items-center gap-3">
                     <div class="w-10 h-10 bg-gradient-to-br from-coral-500 to-gold-400 rounded-lg flex items-center justify-center text-navy-900 font-bold text-xl font-display">
                         N
@@ -112,7 +111,6 @@
                     </span>
                 </div>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-8">
                     <a href="#services" class="text-sm font-medium hover:text-coral-400 transition-colors">Services</a>
                     <a href="#about" class="text-sm font-medium hover:text-coral-400 transition-colors">About</a>
@@ -122,14 +120,12 @@
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <button class="md:hidden text-2xl" onclick="toggleMobileMenu()">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-navy-800 border-b border-white/10 p-6">
             <div class="flex flex-col gap-4">
                 <a href="#services" class="text-lg font-medium hover:text-coral-400">Services</a>
@@ -142,7 +138,6 @@
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden noise-bg pt-20">
-        <!-- Animated Background Blobs -->
         <div class="hero-blob w-96 h-96 bg-coral-500 top-20 -left-20"></div>
         <div class="hero-blob w-80 h-80 bg-gold-400 bottom-20 right-0 animation-delay-2000"></div>
         <div class="hero-blob w-64 h-64 bg-purple-500 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-20"></div>
@@ -172,7 +167,6 @@
                     </a>
                 </div>
 
-                <!-- Stats -->
                 <div class="grid grid-cols-3 gap-8 mt-20 max-w-2xl mx-auto">
                     <div class="text-center">
                         <div class="text-3xl font-display font-bold text-gold-400">500+</div>
@@ -190,7 +184,6 @@
             </div>
         </div>
 
-        <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <i class="fas fa-chevron-down text-gray-500"></i>
         </div>
@@ -204,395 +197,429 @@
                 <p class="text-gray-400 max-w-2xl mx-auto">Comprehensive digital and administrative solutions tailored to your needs</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Graphic Design -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-coral-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-palette text-white"></i>
-                    </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-coral-400 transition-colors">Graphic Design</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-coral-500 text-xs"></i> Logo Design & Branding</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-coral-500 text-xs"></i> Brochures & Flyers</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-coral-500 text-xs"></i> Business Cards</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-coral-500 text-xs"></i> Posters & Banners</li>
-                    </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/graphicsfamily.com/594dcc9994a09272537eac992f109dc17d6c6221.jpg" alt="Graphic Design" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
-                    </div>
-                </div>
-
-                <!-- Web Design -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-laptop-code text-white"></i>
-                    </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">Web Design & Editing</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500 text-xs"></i> Website Design</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500 text-xs"></i> UI/UX Improvements</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500 text-xs"></i> Content Updates</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500 text-xs"></i> Responsive Optimization</li>
-                    </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/cdn.dribbble.com/3403fe46f453b9f09d42a3a6e98a3edfd5237ee2.png" alt="Web Design" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
-                    </div>
-                </div>
-
-                <!-- Document Editing -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-gold-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-yellow-500 to-gold-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- ATS Friendly CV -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-coral-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
                         <i class="fas fa-file-alt text-white"></i>
                     </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-gold-400 transition-colors">Document Services</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-gold-500 text-xs"></i> Certificate Design</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-gold-500 text-xs"></i> Receipt Creation</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-gold-500 text-xs"></i> CV/Resume Writing</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-gold-500 text-xs"></i> Image Editing</li>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-emerald-400 transition-colors">ATS Friendly CV</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> ATS-Optimized Format</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Professional Layout</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Keyword Optimization</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Multiple Formats</li>
                     </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/www.freevector.com/0dea6dda1c16f276f6a2b9a69bc43fe95e3295a4.jpg" alt="Document Services" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/www.visualcv.com/4ac496899b665eff497a1dd8855d888a1efab957.png" alt="ATS CV" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
                     </div>
                 </div>
 
-                <!-- KRA Services -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-red-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-red-600 to-red-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-calculator text-white"></i>
+                <!-- Cover Letter -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-envelope-open-text text-white"></i>
                     </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-red-400 transition-colors">KRA Services</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-red-500 text-xs"></i> PIN Registration</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-red-500 text-xs"></i> Tax Returns Filing</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-red-500 text-xs"></i> Compliance Certificates</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-red-500 text-xs"></i> Tax Consultation</li>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">Cover Letter</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500 text-xs"></i> Professional Writing</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500 text-xs"></i> Tailored to Job</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500 text-xs"></i> Custom Formatting</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500 text-xs"></i> Quick Turnaround</li>
                     </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2 bg-white flex items-center justify-center p-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/www.kra.go.ke/58bfa18ee743d3409ec2f065acfe3321487b88eb.png" alt="KRA" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/static.vecteezy.com/77a824ef6a8f467a31fe2dae9cd036c92f788c9a.jpg" alt="Cover Letter" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
                     </div>
                 </div>
 
-                <!-- SHA Registration -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-green-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
+                <!-- SHA Application -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-green-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
                         <i class="fas fa-heartbeat text-white"></i>
                     </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-green-400 transition-colors">SHA Registration</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-green-400 transition-colors">SHA Application</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
                         <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> New Registration</li>
                         <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Dependent Addition</li>
                         <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Account Updates</li>
                         <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Contribution Queries</li>
                     </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2 bg-white flex items-center justify-center p-2">
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
                         <img src="https://kimi-web-img.moonshot.cn/img/faidihr.com/cd45e1f2bd664ae653105e9aea474b893889ed85.webp" alt="SHA" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
                     </div>
                 </div>
 
-                <!-- KUCCPS & HELB -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-graduation-cap text-white"></i>
+                <!-- NSSF -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-building text-white"></i>
                     </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-purple-400 transition-colors">Education Services</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500 text-xs"></i> KUCCPS Application</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500 text-xs"></i> Course Selection</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500 text-xs"></i> HELB 1st Time App</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500 text-xs"></i> Loan Status Checks</li>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-purple-400 transition-colors">NSSF Registration</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500 text-xs"></i> New Member Registration</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500 text-xs"></i> Employer Registration</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500 text-xs"></i> Contribution Statements</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500 text-xs"></i> Compliance Checks</li>
                     </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2 bg-white flex items-center justify-center p-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/www.helb.co.ke/fc4ac2a1341d345c341ae79e6b2799153bd67cf8.png" alt="HELB" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/www.nssf.or.ke/3a8b6c4d9e2f1a5b7c8d9e0f1a2b3c4d5e6f7a8b.png" alt="NSSF" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
                     </div>
                 </div>
 
-                <!-- CV & Cover Letter -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-teal-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-file-alt text-white"></i>
-                    </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-teal-400 transition-colors">CV & Cover Letter</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500 text-xs"></i> ATS-Friendly CV Design</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500 text-xs"></i> Professional Cover Letters</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500 text-xs"></i> Resume Writing</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500 text-xs"></i> Job Application Support</li>
-                    </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/www.visualcv.com/4ac496899b665eff497a1dd8855d888a1efab957.png" alt="CV Design" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
-                    </div>
-                </div>
-
-                <!-- NSSF Services -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-green-600/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-green-600 to-green-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-shield-alt text-white"></i>
-                    </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-green-400 transition-colors">NSSF Services</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> NSSF Registration</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Member Number Application</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Contribution Queries</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Withdrawal Processing</li>
-                    </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2 bg-white flex items-center justify-center p-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/www.nssf.or.ke/logo.png" alt="NSSF" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                </div>
-
-                <!-- Employment Returns -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-orange-500 to-yellow-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-briefcase text-white"></i>
-                    </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-orange-400 transition-colors">Employment Returns</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-xs"></i> Employment Return Filing</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-xs"></i> With P9 Form</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-xs"></i> Without P9 Form</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-xs"></i> Tax Compliance</li>
-                    </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/www.kra.go.ke/58bfa18ee743d3409ec2f065acfe3321487b88eb.png" alt="Employment Return" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
-                    </div>
-                </div>
-
-                <!-- Project & Proposals -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-indigo-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-project-diagram text-white"></i>
-                    </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-indigo-400 transition-colors">Projects & Proposals</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Project Proposal Writing</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Business Proposals</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Grant Applications</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Research Proposals</li>
-                    </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/static.vecteezy.com/77a824ef6a8f467a31fe2dae9cd036c92f788c9a.jpg" alt="Project Proposal" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
-                    </div>
-                </div>
-
-                <!-- Certificate Services -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-amber-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-amber-500 to-yellow-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-certificate text-white"></i>
-                    </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-amber-400 transition-colors">Certificate Services</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500 text-xs"></i> Good Conduct Certificate</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500 text-xs"></i> Certificate Printing</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500 text-xs"></i> Certificate Design</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500 text-xs"></i> Certificate Editing</li>
-                    </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/www.ecitizen.go.ke/certificate.png" alt="Certificate" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
-                    </div>
-                </div>
-
-                <!-- TSC Services -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-blue-600/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-chalkboard-teacher text-white"></i>
-                    </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">TSC Services</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500 text-xs"></i> TSC Number Application</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500 text-xs"></i> TSC Certificate</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500 text-xs"></i> Registration Support</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500 text-xs"></i> Status Checking</li>
-                    </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2 bg-white flex items-center justify-center p-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/www.tsc.go.ke/logo.png" alt="TSC" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                </div>
-
-                <!-- Smart DL Application -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-red-600/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-red-600 to-red-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
+                <!-- New KRA PIN -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-red-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-red-600 to-red-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
                         <i class="fas fa-id-card text-white"></i>
                     </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-red-400 transition-colors">Smart DL Services</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-red-500 text-xs"></i> Smart DL Application</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-red-500 text-xs"></i> DL Renewal</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-red-500 text-xs"></i> NTSA Portal Services</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-red-500 text-xs"></i> License Conversion</li>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-red-400 transition-colors">New KRA PIN</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-red-500 text-xs"></i> Individual PIN</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-red-500 text-xs"></i> Business PIN</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-red-500 text-xs"></i> Non-Resident PIN</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-red-500 text-xs"></i> PIN Certificate</li>
                     </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/www.ntsa.go.ke/driving-license.png" alt="Driving License" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/www.kra.go.ke/58bfa18ee743d3409ec2f065acfe3321487b88eb.png" alt="KRA PIN" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
                     </div>
                 </div>
 
-                <!-- Birth Certificate -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-pink-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-baby text-white"></i>
-                    </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-pink-400 transition-colors">Birth Certificate</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-pink-500 text-xs"></i> Birth Certificate Application</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-pink-500 text-xs"></i> For Nairobi Residents</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-pink-500 text-xs"></i> With Birth Notification</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-pink-500 text-xs"></i> Duplicate Applications</li>
-                    </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/www.ecitizen.go.ke/birth-cert.png" alt="Birth Certificate" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
-                    </div>
-                </div>
-
-                <!-- Business Plan -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
+                <!-- Nil Return -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-orange-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
                         <i class="fas fa-chart-line text-white"></i>
                     </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-cyan-400 transition-colors">Business Plan</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-xs"></i> Professional Business Plans</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-xs"></i> Financial Projections</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-xs"></i> Market Analysis</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-xs"></i> Investor-Ready Documents</li>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-orange-400 transition-colors">Nil Return Filing</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-xs"></i> Individual Nil Returns</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-xs"></i> Business Nil Returns</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-xs"></i> Compliance Confirmation</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-xs"></i> Annual Filing</li>
                     </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/static.vecteezy.com/77a824ef6a8f467a31fe2dae9cd036c92f788c9a.jpg" alt="Business Plan" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/www.kra.go.ke/58bfa18ee743d3409ec2f065acfe3321487b88eb.png" alt="Nil Return" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
                     </div>
                 </div>
 
-                <!-- Passport Application -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-emerald-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-passport text-white"></i>
+                <!-- Employment Return -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-yellow-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-yellow-500 to-amber-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-briefcase text-white"></i>
                     </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-emerald-400 transition-colors">Passport Services</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Passport Application</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Renewal Services</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> e-Passport Services</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Document Preparation</li>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">Employment Return</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-yellow-500 text-xs"></i> With/Without P9 Form</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-yellow-500 text-xs"></i> Tax Computation</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-yellow-500 text-xs"></i> Annual Returns</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-yellow-500 text-xs"></i> Refund Claims</li>
                     </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/www.ecitizen.go.ke/passport.png" alt="Passport" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/www.kra.go.ke/58bfa18ee743d3409ec2f065acfe3321487b88eb.png" alt="Employment Return" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
                     </div>
                 </div>
 
-                <!-- Attachment Reports -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-violet-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-file-contract text-white"></i>
+                <!-- Projects and Proposals -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-teal-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-teal-500 to-cyan-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-tasks text-white"></i>
                     </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-violet-400 transition-colors">Attachment Reports</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-violet-500 text-xs"></i> Industrial Attachment Reports</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-violet-500 text-xs"></i> Field Attachment Reports</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-violet-500 text-xs"></i> Professional Formatting</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-violet-500 text-xs"></i> Report Writing Support</li>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-teal-400 transition-colors">Projects & Proposals</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500 text-xs"></i> Business Proposals</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500 text-xs"></i> Project Plans</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500 text-xs"></i> Grant Proposals</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500 text-xs"></i> Research Papers</li>
                     </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/www.freevector.com/0dea6dda1c16f276f6a2b9a69bc43fe95e3295a4.jpg" alt="Attachment Report" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/unblast.com/3d7b825df72b4ebd4ac26204c265445c924728b2.jpg" alt="Proposals" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <!-- Fee Slip Editing -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-pink-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-pink-500 to-rose-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-receipt text-white"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-pink-400 transition-colors">Fee Slip Editing</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-pink-500 text-xs"></i> Bank Fee Slips</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-pink-500 text-xs"></i> School Fee Slips</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-pink-500 text-xs"></i> Government Payments</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-pink-500 text-xs"></i> Professional Editing</li>
+                    </ul>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/static.vecteezy.com/77a824ef6a8f467a31fe2dae9cd036c92f788c9a.jpg" alt="Fee Slip" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <!-- Certificate of Good Conduct -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-indigo-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-indigo-500 to-blue-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-gavel text-white"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-indigo-400 transition-colors">Certificate of Good Conduct</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Application Processing</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Status Tracking</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Expedited Service</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Document Verification</li>
+                    </ul>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/www.citizen.dci.go.ke/2e4f6a8b1c3d5e7f9a2b4c6d8e0f1a3b5c7d9e1f.png" alt="Good Conduct" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <!-- TSC Number & Certificate -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-cyan-500 to-sky-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-chalkboard-user text-white"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">TSC Number & Certificate</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-xs"></i> TSC Registration</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-xs"></i> Certificate Application</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-xs"></i> Teacher Verification</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-xs"></i> License Renewal</li>
+                    </ul>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/www.tsc.go.ke/1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b.png" alt="TSC" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <!-- Certificate Printing -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-amber-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-print text-white"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-amber-400 transition-colors">Certificate Printing</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500 text-xs"></i> High-Quality Prints</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500 text-xs"></i> Certificate Binding</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500 text-xs"></i> Lamination Service</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500 text-xs"></i> Fast Delivery</li>
+                    </ul>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/www.freevector.com/0dea6dda1c16f276f6a2b9a69bc43fe95e3295a4.jpg" alt="Printing" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <!-- Certificate Design -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-rose-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-rose-500 to-red-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-certificate text-white"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-rose-400 transition-colors">Certificate Design</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-500 text-xs"></i> Custom Certificate Design</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-500 text-xs"></i> Award Certificates</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-500 text-xs"></i> Training Certificates</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-500 text-xs"></i> Professional Layouts</li>
+                    </ul>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/unblast.com/3d7b825df72b4ebd4ac26204c265445c924728b2.jpg" alt="Certificate Design" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
                     </div>
                 </div>
 
                 <!-- Assignment Assistance -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-rose-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-book-open text-white"></i>
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-lime-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-lime-500 to-green-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-pencil-ruler text-white"></i>
                     </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-rose-400 transition-colors">Assignment Help</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-500 text-xs"></i> Assignment Writing</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-500 text-xs"></i> Research Assistance</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-500 text-xs"></i> Editing & Proofreading</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-rose-500 text-xs"></i> Referencing Support</li>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-lime-400 transition-colors">Assignment Assistance</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-lime-500 text-xs"></i> Research Papers</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-lime-500 text-xs"></i> Essays & Reports</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-lime-500 text-xs"></i> Proofreading</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-lime-500 text-xs"></i> Formatting Help</li>
                     </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/unblast.com/3d7b825df72b4ebd4ac26204c265445c924728b2.jpg" alt="Assignment Help" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/static.vecteezy.com/77a824ef6a8f467a31fe2dae9cd036c92f788c9a.jpg" alt="Assignment" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
                     </div>
                 </div>
 
-                <!-- Online Exams & CATS -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-sky-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-sky-500 to-blue-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-laptop-house text-white"></i>
+                <!-- Online Exams & CATs -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-violet-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-laptop text-white"></i>
                     </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-sky-400 transition-colors">Online Exams & CATS</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-sky-500 text-xs"></i> Online Exam Assistance</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-sky-500 text-xs"></i> CAT Support</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-sky-500 text-xs"></i> Timed Assessments</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-sky-500 text-xs"></i> Various Subjects</li>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-violet-400 transition-colors">Online Exams & CATs</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-violet-500 text-xs"></i> Proctored Exams</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-violet-500 text-xs"></i> CAT Preparation</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-violet-500 text-xs"></i> Online Quizzes</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-violet-500 text-xs"></i> Timed Assessments</li>
                     </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/cdn.dribbble.com/3403fe46f453b9f09d42a3a6e98a3edfd5237ee2.png" alt="Online Exams" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/cdn.dribbble.com/3403fe46f453b9f09d42a3a6e98a3edfd5237ee2.png" alt="Online Exams" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
                     </div>
                 </div>
 
-                <!-- Computer Training -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-lime-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-lime-500 to-green-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-desktop text-white"></i>
+                <!-- Graphic Design -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-coral-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-pink-500 to-rose-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-palette text-white"></i>
                     </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-lime-400 transition-colors">Computer Training</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-lime-500 text-xs"></i> Online Computer Packages</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-lime-500 text-xs"></i> One Month Course</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-lime-500 text-xs"></i> MS Office Training</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-lime-500 text-xs"></i> Digital Skills</li>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-coral-400 transition-colors">Graphic Design</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-coral-500 text-xs"></i> Logo Design & Branding</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-coral-500 text-xs"></i> Brochures & Flyers</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-coral-500 text-xs"></i> Business Cards</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-coral-500 text-xs"></i> Posters & Banners</li>
                     </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/cdn.dribbble.com/3403fe46f453b9f09d42a3a6e98a3edfd5237ee2.png" alt="Computer Training" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/graphicsfamily.com/594dcc9994a09272537eac992f109dc17d6c6221.jpg" alt="Graphic Design" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
                     </div>
                 </div>
 
-                <!-- Science Tutoring -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-fuchsia-500/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-fuchsia-500 to-purple-400 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-flask text-white"></i>
+                <!-- Smart DL & Renewal -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-blue-600/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-id-card text-white"></i>
                     </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-fuchsia-400 transition-colors">Science & Math Tutoring</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-fuchsia-500 text-xs"></i> Mathematics</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-fuchsia-500 text-xs"></i> Physics</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-fuchsia-500 text-xs"></i> Chemistry</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-fuchsia-500 text-xs"></i> Online Sessions (Per Hour)</li>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">Smart DL & Renewal</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500 text-xs"></i> Smart Driving License</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500 text-xs"></i> License Renewal</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500 text-xs"></i> Provisional License</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500 text-xs"></i> Replacement Services</li>
                     </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/unblast.com/3d7b825df72b4ebd4ac26204c265445c924728b2.jpg" alt="Science Tutoring" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/www.ntsa.go.ke/7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b.png" alt="Driving License" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
                     </div>
                 </div>
 
-                <!-- Fee Slip & Portfolio -->
-                <div class="service-card glass-card rounded-2xl p-6 hover:border-teal-400/50 transition-all duration-300 group scroll-reveal">
-                    <div class="service-icon w-12 h-12 bg-gradient-to-br from-teal-400 to-cyan-300 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300">
-                        <i class="fas fa-receipt text-white"></i>
+                <!-- Birth Certificate Application -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-teal-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-teal-500 to-emerald-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-baby-carriage text-white"></i>
                     </div>
-                    <h3 class="font-display text-lg font-bold mb-2 group-hover:text-teal-400 transition-colors">Fee Slip & Portfolio</h3>
-                    <ul class="space-y-1.5 text-gray-400 text-xs mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500 text-xs"></i> Fee Slip Editing</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500 text-xs"></i> Portfolio Websites</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500 text-xs"></i> Professional Design</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500 text-xs"></i> Custom Solutions</li>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-teal-400 transition-colors">Birth Certificate Application</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500 text-xs"></i> New Registration</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500 text-xs"></i> Replacement</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500 text-xs"></i> Nairobi Residents Only</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-500 text-xs"></i> With Notification Number</li>
                     </ul>
-                    <div class="relative h-32 rounded-lg overflow-hidden mt-2">
-                        <img src="https://kimi-web-img.moonshot.cn/img/www.visualcv.com/4ac496899b665eff497a1dd8855d888a1efab957.png" alt="Fee Slip" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/e-citizen.go.ke/5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f.png" alt="Birth Certificate" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <!-- Business Plan -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-amber-600/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-amber-600 to-yellow-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-chart-simple text-white"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-amber-400 transition-colors">Business Plan</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500 text-xs"></i> Startup Business Plans</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500 text-xs"></i> Investor Pitch Decks</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500 text-xs"></i> Financial Projections</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-500 text-xs"></i> Market Analysis</li>
+                    </ul>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/unblast.com/3d7b825df72b4ebd4ac26204c265445c924728b2.jpg" alt="Business Plan" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <!-- Portfolio Websites -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-cyan-600/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-cyan-600 to-blue-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-globe text-white"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">Portfolio Websites</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-xs"></i> Personal Portfolio</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-xs"></i> Creative Showcase</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-xs"></i> Responsive Design</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-xs"></i> SEO Optimized</li>
+                    </ul>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/cdn.dribbble.com/3403fe46f453b9f09d42a3a6e98a3edfd5237ee2.png" alt="Portfolio Website" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <!-- Cert Editing -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-purple-600/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-purple-600 to-indigo-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-edit text-white"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-purple-400 transition-colors">Cert Editing</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500 text-xs"></i> Certificate Corrections</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500 text-xs"></i> Date & Name Changes</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500 text-xs"></i> Professional Editing</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500 text-xs"></i> Digital Certificates</li>
+                    </ul>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/www.freevector.com/0dea6dda1c16f276f6a2b9a69bc43fe95e3295a4.jpg" alt="Cert Editing" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <!-- Job Application -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-emerald-600/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-emerald-600 to-green-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-briefcase text-white"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-emerald-400 transition-colors">Job Application</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Application Letters</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> CV Submission</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Online Applications</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Follow-up Services</li>
+                    </ul>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/www.visualcv.com/4ac496899b665eff497a1dd8855d888a1efab957.png" alt="Job Application" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <!-- HELB Application -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-fuchsia-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-fuchsia-500 to-purple-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-graduation-cap text-white"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-fuchsia-400 transition-colors">HELB Application</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-fuchsia-500 text-xs"></i> First Time Application</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-fuchsia-500 text-xs"></i> Loan Status Checks</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-fuchsia-500 text-xs"></i> Annual Application</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-fuchsia-500 text-xs"></i> Document Submission</li>
+                    </ul>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/www.helb.co.ke/fc4ac2a1341d345c341ae79e6b2799153bd67cf8.png" alt="HELB" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <!-- Passport Application -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-sky-500/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-sky-500 to-blue-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-passport text-white"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-sky-400 transition-colors">Passport Application</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-sky-500 text-xs"></i> New Passport</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-sky-500 text-xs"></i> Passport Renewal</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-sky-500 text-xs"></i> Lost Passport Replacement</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-sky-500 text-xs"></i> Tracking & Collection</li>
+                    </ul>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/e-citizen.go.ke/5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f.png" alt="Passport" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <!-- Attachment Reports -->
+                <div class="service-card glass-card rounded-2xl p-8 hover:border-orange-600/50 transition-all duration-300 group scroll-reveal">
+                    <div class="service-icon w-14 h-14 bg-gradient-to-br from-orange-600 to-amber-400 rounded-xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300">
+                        <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3 group-hover:text-orange-400 transition-colors">Attachment Reports</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-xs"></i> Industrial Attachment Reports</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-xs"></i> Internship Reports</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-xs"></i> Logbook Compilation</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500 text-xs"></i> Professional Formatting</li>
+                    </ul>
+                    <div class="relative h-40 rounded-lg overflow-hidden mt-4 bg-white flex items-center justify-center p-4">
+                        <img src="https://kimi-web-img.moonshot.cn/img/static.vecteezy.com/77a824ef6a8f467a31fe2dae9cd036c92f788c9a.jpg" alt="Attachment Reports" class="max-h-full object-contain opacity-90 group-hover:scale-110 transition-transform duration-500">
                     </div>
                 </div>
             </div>
@@ -740,28 +767,31 @@
                         <label class="block text-sm font-medium mb-2 text-gray-300">Service Needed</label>
                         <select class="w-full px-4 py-3 bg-navy-800 border border-white/10 rounded-lg focus:border-coral-500 focus:outline-none transition-colors text-gray-300">
                             <option>Select a service...</option>
-                            <option>Graphic Design</option>
-                            <option>Website Design</option>
-                            <option>Document Editing</option>
-                            <option>KRA Services</option>
-                            <option>SHA Registration</option>
-                            <option>KUCCPS/HELB</option>
-                            <option>CV & Cover Letter</option>
-                            <option>NSSF Services</option>
-                            <option>Employment Returns</option>
+                            <option>ATS Friendly CV</option>
+                            <option>Cover Letter</option>
+                            <option>SHA Application</option>
+                            <option>NSSF Registration</option>
+                            <option>New KRA PIN</option>
+                            <option>Nil Return Filing</option>
+                            <option>Employment Return</option>
                             <option>Projects & Proposals</option>
-                            <option>Certificate Services</option>
-                            <option>TSC Services</option>
-                            <option>Smart DL Services</option>
-                            <option>Birth Certificate</option>
+                            <option>Fee Slip Editing</option>
+                            <option>Certificate of Good Conduct</option>
+                            <option>TSC Number & Certificate</option>
+                            <option>Certificate Printing</option>
+                            <option>Certificate Design</option>
+                            <option>Assignment Assistance</option>
+                            <option>Online Exams & CATs</option>
+                            <option>Graphic Design</option>
+                            <option>Smart DL & Renewal</option>
+                            <option>Birth Certificate Application</option>
                             <option>Business Plan</option>
-                            <option>Passport Services</option>
+                            <option>Portfolio Websites</option>
+                            <option>Cert Editing</option>
+                            <option>Job Application</option>
+                            <option>HELB Application</option>
+                            <option>Passport Application</option>
                             <option>Attachment Reports</option>
-                            <option>Assignment Help</option>
-                            <option>Online Exams & CATS</option>
-                            <option>Computer Training</option>
-                            <option>Science & Math Tutoring</option>
-                            <option>Fee Slip & Portfolio</option>
                             <option>Other</option>
                         </select>
                     </div>
@@ -855,8 +885,6 @@
                         <li><a href="#" class="hover:text-coral-400 transition-colors">Web Design</a></li>
                         <li><a href="#" class="hover:text-coral-400 transition-colors">KRA Services</a></li>
                         <li><a href="#" class="hover:text-coral-400 transition-colors">HELB/KUCCPS</a></li>
-                        <li><a href="#" class="hover:text-coral-400 transition-colors">CV & Cover Letter</a></li>
-                        <li><a href="#" class="hover:text-coral-400 transition-colors">Business Plans</a></li>
                     </ul>
                 </div>
             </div>
@@ -869,13 +897,11 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
         }
 
-        // Navbar Scroll Effect
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
@@ -885,7 +911,6 @@
             }
         });
 
-        // Scroll Reveal Animation
         const observerOptions = {
             threshold: 0.1,
             rootMargin: "0px 0px -50px 0px"
@@ -901,7 +926,6 @@
 
         document.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el));
 
-        // Smooth Scroll for Anchor Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -911,7 +935,6 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    // Close mobile menu if open
                     document.getElementById('mobileMenu').classList.add('hidden');
                 }
             });
