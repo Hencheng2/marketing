@@ -101,12 +101,17 @@
     <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
         <div class="absolute inset-0 bg-navy-900/80 backdrop-blur-md border-b border-white/5"></div>
         <div class="container mx-auto px-6 py-4 relative z-10">
-            <div class="flex items-center gap-3">
-                <img src="images/logo.png" alt="Nexus Craft" class="w-10 h-10 object-contain">
-                <span class="font-display font-bold text-xl tracking-tight">
-                    NEXUS<span class="text-coral-500">CRAFT</span>
-                </span>
-            </div>
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <!-- Logo Image - nexus.png -->
+                    <img src="nexus.png" 
+                         alt="Nexus Craft Logo" 
+                         class="w-10 h-10 object-contain rounded-lg"
+                         onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-10 h-10 bg-gradient-to-br from-coral-500 to-gold-400 rounded-lg flex items-center justify-center text-navy-900 font-bold text-xl font-display\'>N</div><span class=\'font-display font-bold text-xl tracking-tight\'>NEXUS<span class=\'text-coral-500\'>CRAFT</span></span>'">
+                    <span class="font-display font-bold text-xl tracking-tight">
+                        NEXUS<span class="text-coral-500">CRAFT</span>
+                    </span>
+                </div>
 
                 <div class="hidden md:flex items-center gap-8">
                     <a href="#services" class="text-sm font-medium hover:text-coral-400 transition-colors">Services</a>
@@ -819,9 +824,10 @@
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-2">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-coral-500 to-gold-400 rounded-lg flex items-center justify-center text-navy-900 font-bold text-xl font-display">
-                            N
-                        </div>
+                        <img src="nexus.png" 
+                             alt="Nexus Craft Logo" 
+                             class="w-10 h-10 object-contain rounded-lg"
+                             onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-10 h-10 bg-gradient-to-br from-coral-500 to-gold-400 rounded-lg flex items-center justify-center text-navy-900 font-bold text-xl font-display\'>N</div><span class=\'font-display font-bold text-2xl tracking-tight\'>NEXUS<span class=\'text-coral-500\'>CRAFT</span></span>'">
                         <span class="font-display font-bold text-2xl tracking-tight">
                             NEXUS<span class="text-coral-500">CRAFT</span>
                         </span>
